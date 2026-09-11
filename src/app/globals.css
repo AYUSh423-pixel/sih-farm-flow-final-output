@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  --canvas: #f3f6f1;
+  --background: #ffffff;
+  --foreground: #1e2f28;
+  --heading: #12352c;
+  --primary: #1f7a4d;
+  --primary-dark: #16633d;
+  --sage: #e7f2ea;
+  --line: #d7e3db;
+  --ring: #1f7a4d;
+  --gold: #b8860b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+html,
+body {
+  background: var(--canvas);
+  color: var(--foreground);
+}
+
+body {
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+  background-image:
+    radial-gradient(ellipse 900px 420px at 0% -10%, rgba(31, 122, 77, 0.08), transparent 55%),
+    radial-gradient(ellipse 700px 380px at 100% 0%, rgba(18, 53, 44, 0.05), transparent 50%);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), Georgia, serif;
+  color: var(--heading);
+}
+
+::selection {
+  background: #cfe8d6;
+}
